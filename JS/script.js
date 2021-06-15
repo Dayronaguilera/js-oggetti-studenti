@@ -26,43 +26,40 @@ var student = {
     cognome: "aguilera",
     anni: 36,
 }
-// var class1B = {
-//     student: [],
-// }  
-    // var studentName = prompt('Inserisci il nome studente');
-    // var studentSurname = prompt('Inserisci il cognome studente');
-    // var studentAge = parseInt( prompt('Inserisci l\'età'));
-
-    // // lo facciamo in un modo un po' "anonimo", per evitare dopo
-    // // di sovrascrivere lo stesso oggetto.
-    // class1B.student.push({
-    //     name: studentName,
-    //     surname: studentSurname,
-    //     age: studentAge,
-    // });
-
 
 for (var key in student) {
-    outputHtml.innerHTML = (key, student[key]);
+    outputHtml.innerHTML += student[key] + ' ';
 }
 
-// var htmlString = '';
+// seconda parte ---------------------------
 
-// for (var key in class1B) {  // ciclo nell'oggetto
+var output = document.getElementById("output2");
 
-//     if (key === 'student') { // qui scelgo l'array
-//         htmlString += '<li>' + key + ': ';
+var class1b = {
+    students: [],
+}
 
-//         for (var x = 0; x < class1B[key].length; x++) { // ciclo l'array dei passengers
-//             htmlString += class1B[key][x]['name'] + ', ';
-//         }
 
-//         htmlString += '</li>';
+var studentName = prompt('Inserisci il nome ');
+var studentSurname = prompt('Inserisci il cognome ');
+var studentAge = prompt('Inserisci gli anni');
 
-//     } else {
-//         htmlString += '<li>' + key + ': ' + class1B[key] + '</li>'
-//     }
+// lo facciamo in un modo un po' "anonimo", per evitare dopo
+// di sovrascrivere lo stesso oggetto.
+class1b.students.push({
+    name: studentName,
+    surname: studentSurname,
+    age: studentAge,
+});
+
+for (var i = 0; i < class1b.students.length; i++) {
+
+    // per stampare tutti i nomi dei passengers
+    // console.log(car.passengers[i].name)
     
-// }
-// outputHtml.innerHTML = htmlString;
-
+    // per stampare tutte le proprietà key: value dell'oggetto
+    for (var key in class1b.students[i]) {
+        output.innerHTML += class1b.students[i][key] + ' ';
+    }
+    
+}
