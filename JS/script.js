@@ -32,8 +32,28 @@ for (var key in student) {
 }
 
 // seconda parte ---------------------------
+var output2 = document.getElementById("output2");
 
-var output = document.getElementById("output2");
+var class1A = [
+    
+    { name: "dayron", cognome: "aguilera",},
+    { name: "noemi", cognome: "patermo",},
+    { name: "tony", cognome: "d'agata",},
+    
+]
+   
+for (var i = 0; i < class1A.length; i++) {
+
+    // per stampare tutte le proprietà key: value dell'oggetto
+    for (var key in class1A[i]) {
+        output2.innerHTML += class1A[i][key] + '</br>';
+    }
+    
+}
+
+
+// terza parte ------------------------------
+var output = document.getElementById("output3");
 
 var class1b = {
     students: [],
